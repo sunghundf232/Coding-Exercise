@@ -30,12 +30,39 @@ for(var num in influencer){
   console.log(influencer[num]);
 }
 
-//다 차원 배열
+//다 차원 배열 - 순서나 위치 정보가 필요할때
 
 let twoDimensional = [[1,2], [[3,4]]];
 console.log(twoDimensional[0]);
 console.log(twoDimensional[0][1]);
 
+let otherFridge = {
+  fridge : {
+    '채소층' : ['참외','참외','참외','참외','참외'],
+    '반찬층' : ['참외','참외','참외','참외','참외']
+  },
+  freezer : {
+    '얼음층' : ['얼음'],
+    '얼음층' : ['얼음','아이스크림'],
+  }
+};
+
+
+
+
+
+
+
 let myFridge = [
-  []
+  ['참외','토마토','오이','양파']
+];
+
+let mailbox = [
+  101,201,301,501,601
+];
+
+let chessBoard = [
+  ['R','N','Q','K','B','N','R'],
+  ['','','','','','','','','',],
+  ['R','N','Q','K','B','N','R']
 ]
