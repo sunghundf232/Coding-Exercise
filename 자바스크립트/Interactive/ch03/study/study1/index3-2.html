@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ch03/study/study1/css/index3-2.css">
+    <title>캡처링2</title>
+</head>
+
+<body>
+    <div>DIV
+        <ul>UL
+            <li>LI</li>
+    </div>
+    </form>
+
+    <p>이벤트가 발생하면 가장 먼저 window 객체에서부터 target 까지 이벤트 전파가 일어납니다. (캡쳐링 단계)
+        그리고 나서 타깃에 도달하면 타깃에 등록된 이벤트 핸들러가 동작하고, (타깃 단계)
+        이후 다시 window 객체로 이벤트가 전파됩니다. (버블링 단계)
+        
+        이런 과정을 통해 각 요소에 할당된 이벤트 핸들러가 호출되는데요.
+        
+        캡쳐링 단계에서 이벤트를 발생시켜야 하는 일은 매우 드문 경우입니다. 보통 타깃 단계에서 target에 등록된 이벤트 핸들러가 있으면 해당 이벤트 핸들러가 먼저 동작한 이 후에 버블링 단계에서 각 부모 요소에 등록된 이벤트 핸들러가 있으면 그 때 해당 이벤트 핸들러가 동작하는 것이 일반적인데요.
+        
+        하지만 상황에 따라서는 캡쳐링 단계에서 부모 요소의 이벤트 핸들러를 동작시켜야 할 수도 있겠죠? 캡쳐링 단계에서 이벤트 핸들러를 동작시키려면, addEventListener에 세번째 프로퍼티에 true 또는 { capture:true }를 전달하면 됩니다.
+        아래 코드를 실행해서 각 태그들을 클릭해 보세요.</p>
+</body>
+<script>
+    for (let elem of document.querySelectorAll('*')) {
+        elem.addEventListener("click", e => alert(`캡쳐링 단계: ${elem.tagName}`), true);
+        elem.addEventListener("click", e => alert(`버블링 단계: ${elem.tagName}`));
+    }
+</script>
+
+</html>
