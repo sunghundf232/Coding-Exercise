@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+        const arr = [3,6,8,10,13,16,22,29];
+
+        const arr1 = arr.reduce(function(acc,cur,i){
+            acc.push(cur +2);
+            return acc;
+        },[]);
+        console.log(arr1)
+
+        const arr2 = arr.reduce(function(acc,cur,i){
+            acc.push(cur % 2 ? cur : cur *2);
+            return acc;
+        },[]);
+        console.log(arr2);
+      
+        
+</script>
+</html>

@@ -14,7 +14,7 @@ console.log('===')
 //1. forEach - 아규먼트로 콜백함수 작성 -> 첫번째 파라미터로 배열의 요소를 순서대로 하나씩 전달
 
 /*
-a.forEach(function(b : 배열요소(꼭 필요), index = i : 요소 인덱스:방번호 ){
+a.forEach(function(b : 배열요소(꼭 필요), index = i : 요소 인덱스:방번호, arr: 반복적인 배열 자체 ){
 
  1) console.log(`${b}님이 입장 하셨습니다.`)
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //reduce를 map처럼 사용하기
+
+    /** map - 배열복사
+     * 원본 length, 크기가 같다.
+     * item 값을 수정할수 있다.
+    */
+    const arr = [3,6,8,10,13,16,22,29];
+
+   /* 
+    let num = arr.map(function(num2){
+        return num2+2
+    });
+    console.log(num);
+
+    const arr2 = arr.map(function(item,i){
+        return item;
+    });
+    console.log(arr2);
+    */
+
+    //짝수 *2 홀수 원본 그댈
+    /*
+    const arr3 = arr.map(function(item,i){
+        if(item %2 ===0){
+            return item *2
+        } else {return item}
+    });
+    */
+
+    
+    const arr4 = arr.map(function(item){
+        return item % 2 ? item : item * 2;
+    });
+    console.log(arr4);
+
+    const arr5 = arr.map(item => item % 2 ? item : item * 2);
+    console.log(arr5);
+
+    //reduce
+
+
+
+
+
+    
+ 
+</script>
+</html>

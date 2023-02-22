@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모듈이란 - 브라우저에서 나의 컴퓨터에 있는 html 파일 불러오게 되면 자바스크립트 모듈 문법 사용 불가 해결책 - 서버를 통해서 html 파일 불러와야 함</title>
+</head>
+<body>
+   <h1>모듈이란 - 각각 파일맞게 분류</h1>
+   <br>
+   <h2>한데 모았어 -> 서로 다른 자바스크립트 코드 존재 마치 하나의 파일에 존재하는것 처럼 스코프 공유</h2>
+   <br>
+   <h2>하지만 파일 한곳에 모을 필요없고 인포트할 주소만 잘 적어도 가능해</h2>
+
+   <h3>해결책 - 라이브 서버러 켜</h3>
+   <!--
+    index.js
+
+    print(title); :  Uncaught ReferenceError: Cannot access 'title' before initialization 출력
+    -->
+
+</body>
+
+<!--
+    1. 전에 값 없어지도 새로운 값이 겹쳐 나오는것
+    2.  SyntaxError 에러 떠
+-->
+
+<!--
+    1. 각각 모듈파일이 다른파일과 스코프를 공유할수 없도록 모듈 스코프가 있어야 한다.
+    2. 각각 type="module"  module 값을 줘야 한다.
+
+    3. 하지만 에러 발생 : 브라우저에서 나의 컴퓨터에 있는 html 파일 불러오게 되면 자바스크립트 모듈 문법 사용 불가
+-->
+<script type="module" src="./print.js"></script>
+<script type="module" src="./index.js"></script>
+</html>
